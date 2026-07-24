@@ -1,0 +1,112 @@
+# سكربت مقابلة الكاتب — يُستخدم في وضع الدردشة / المقابلة
+version: "0.1"
+title_ar: مقابلة فهم تصوّر الرواية
+intro_ar: |
+  مرحبًا. سأطرح أسئلة متدرجة لفهم تصوّرك قبل أي كتابة أو تخطيط.
+  يمكنك الإجابة باختصار أو بإسهاب. يمكنك قول «تخطَّ» لأي سؤال.
+  في النهاية سأحفظ ملف تصوّر (vision) داخل مشروعك.
+
+phases:
+  - id: spark
+    title_ar: الشرارة
+    questions:
+      - id: q_logline
+        prompt_ar: بجملة أو جملتين: ما قصة روايتك؟
+        field: logline
+      - id: q_why_now
+        prompt_ar: لماذا تريد كتابة هذه الرواية الآن؟ ما الحاجة الداخلية أو السؤال الذي يلاحقُك؟
+        field: author_why
+      - id: q_feeling
+        prompt_ar: ما الإحساس الذي تريد أن يبقى مع القارئ بعد آخر صفحة؟
+        field: residual_feeling
+
+  - id: world
+    title_ar: العالم والمكان
+    questions:
+      - id: q_setting
+        prompt_ar: أين ومتى تجري الأحداث؟ (مدينة، قرية، زمن تاريخي، عوالم متخيلة…)
+        field: setting
+      - id: q_place_pressure
+        prompt_ar: كيف يضغط المكان/الزمن على شخصياتك؟ ماذا يمنع أو يغري؟
+        field: environment_pressure
+      - id: q_social
+        prompt_ar: ما الطبقات أو السلطات أو التابوهات المهمة في هذا العالم؟
+        field: social_field
+
+  - id: people
+    title_ar: الشخصيات
+    questions:
+      - id: q_protagonist
+        prompt_ar: من الشخصية المركزية؟ ماذا تريد علنًا؟ وماذا تحتاج حقًا؟
+        field: protagonist
+      - id: q_wound
+        prompt_ar: ما الجرح أو «الشبح» من الماضي الذي يحرّكها؟
+        field: ghost_wound
+      - id: q_others
+        prompt_ar: من أهم الشخصيات الأخرى؟ وما علاقة كل واحدة بالبطل (حب، سلطة، دين، سر، خصومة)؟
+        field: other_characters
+      - id: q_voices
+        prompt_ar: هل تريد أصواتًا متعددة متكافئة (تعدد باختيني) أم مركزًا واحدًا؟
+        field: voice_mode
+
+  - id: plot
+    title_ar: الحبكة والصراع
+    questions:
+      - id: q_inciting
+        prompt_ar: ما الحدث الذي يكسر التوازن ويفتح القصة؟
+        field: inciting_incident
+      - id: q_conflict
+        prompt_ar: ما الصراع المركزي (داخلي / علائقي / اجتماعي–تاريخي)؟
+        field: central_conflict
+      - id: q_stakes
+        prompt_ar: ماذا يُخسر إن فشل؟ (قيمة: كرامة، حب، حرية، انتماء…)
+        field: stakes
+      - id: q_structure
+        prompt_ar: هل تفضّل بنية كلاسيكية، تعدد خطوط، سرد إطاري (كاليالي)، تشظي، أم لم تقرر بعد؟
+        field: structure_preference
+
+  - id: meaning
+    title_ar: المعنى والباطن
+    questions:
+      - id: q_theme
+        prompt_ar: ما السؤال الأخلاقي/الوجودي الذي تختبره الرواية (لا الشعار)؟
+        field: theme_question
+      - id: q_motifs
+        prompt_ar: هل لديك صور أو رموز أو موتيفات تتكرر في ذهنك؟
+        field: motifs
+      - id: q_taboo
+        prompt_ar: ما الذي تريد أن يُلمَّح إليه دون أن يُقال مباشرة؟
+        field: subtext_zones
+
+  - id: craft
+    title_ar: الحرفة والأسلوب
+    questions:
+      - id: q_narrator
+        prompt_ar: من يروي؟ (أول/ثالث، موثوق/غير موثوق، قريب/بعيد)
+        field: narrator
+      - id: q_language
+        prompt_ar: لغة الكتابة؟ نبرة؟ مراجع أسلوبية تحبها (محفوظ، تولستوي، وود، الليالي…)؟
+        field: style_refs
+      - id: q_lenses
+        prompt_ar: أي عدسات تراث تريد تفعيلها؟ (عربي / روسي–تعدد / أنجلوفوني–حرفة / كلاسيكي) يمكن أكثر من واحدة.
+        field: tradition_lenses
+      - id: q_length
+        prompt_ar: طول تقريبي أو شكل النشر؟ (رواية قصيرة، أجزاء، مسلسلة…)
+        field: length_form
+
+  - id: constraints
+    title_ar: القيود والتفضيلات
+    questions:
+      - id: q_must
+        prompt_ar: ما الذي يجب أن يوجد حتمًا في العمل؟
+        field: must_have
+      - id: q_must_not
+        prompt_ar: ما الذي ترفضه تمامًا (أنماط، مشاهد، نبرات)؟
+        field: must_not
+      - id: q_help
+        prompt_ar: أين تحتاج مساعدة أكثر؟ (شخصيات، حبكة، مشاهد، أسلوب، نقد…)
+        field: help_focus
+
+outro_ar: |
+  شكرًا. سأحفظ إجاباتك في vision.yaml داخل المشروع.
+  العقل المُدير سيقترح المهارات التالية حسب وضعك.

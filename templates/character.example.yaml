@@ -1,0 +1,17 @@
+id: char_01
+name: مثال
+role_in_plot: protagonist
+surface_want: أن يستعيد بيته
+deep_need: أن يغفر لنفسه
+ghost_wound: خيانة أخوية قديمة
+core_fear: أن يكون مثل أبيه
+core_value: الكرامة
+contradiction: يدّعي الزهد ويحمي نفوذه سرًا
+voice_traits: جمل قصيرة، أمثال محلية، يتجنب اسم الميت
+arc: change
+relationship_edges:
+  - target: char_02
+    type: rivalry
+    current_tension: 7
+environment_bond: المدينة القديمة تضغط عليه بالذاكرة الجماعية
+notes: 

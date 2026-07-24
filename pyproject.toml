@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "novel-craft"
+version = "0.1.0"
+description = "نظام مفتوح المصدر لحرفة كتابة الرواية: مهارات ذكاء اصطناعي، عقل مُدير، أوضاع كتابة/تحليل/نقد"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [
+  { name = "Novel Craft Community" }
+]
+keywords = [
+  "novel", "fiction", "writing", "literary", "arabic",
+  "orchestration", "skills", "open-source"
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Education",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: MIT License",
+  "Natural Language :: Arabic",
+  "Natural Language :: English",
+  "Programming Language :: Python :: 3",
+  "Topic :: Text Processing :: Linguistic",
+  "Topic :: Artistic Software",
+]
+dependencies = [
+  "pyyaml>=6.0",
+  "rich>=13.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "ruff>=0.1"]
+
+[project.scripts]
+novel-craft = "novel_craft.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/novel-craft/novel-craft"
+Documentation = "docs/"
+Foundation = "00-foundation/"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["novel_craft*"]
+
+[tool.setuptools.package-data]
+novel_craft = ["schemas/*.yaml", "data/*.yaml", "data/*.json"]

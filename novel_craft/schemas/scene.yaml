@@ -1,0 +1,26 @@
+schema_version: "0.1"
+type: scene
+required:
+  - id
+  - pov_character
+  - goal
+  - obstacle
+  - turn
+fields:
+  id: string
+  title: string
+  chapter: string
+  pov_character: string
+  location: string
+  sensory_pressure: string
+  entering_value_state: string  # e.g. trust:+ / dignity:-
+  goal: string
+  obstacle: string
+  strategy: string
+  turn: string
+  exiting_value_state: string
+  subtext: string
+  plot_consequence: string
+  character_consequence: string
+  motif_image: string
+  text_draft: string

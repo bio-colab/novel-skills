@@ -1,0 +1,188 @@
+# سجل المهارات — العقل المُدير يقرأ هذا الملف
+version: "0.1"
+skills:
+  - id: novel-craft-core
+    name_ar: نواة حرفة الرواية
+    layer: core
+    path: skills/novel-craft-core
+    modes: [write, analyze, critique, free, interview]
+    description: الأونتولوجيا المشتركة ومعايير الجودة والمفردات
+
+  - id: skill-orchestrator
+    name_ar: العقل المُدير
+    layer: core
+    path: skills/skill-orchestrator
+    modes: [write, analyze, critique, free, interview]
+    description: يقرر من يعمل ومتى وكيف ويوثّق
+
+  - id: skill-worldbuilding
+    name_ar: بناء العالم
+    layer: world
+    path: skills/skill-worldbuilding
+    modes: [write, free]
+    description: المكان، الأنظمة الاجتماعية، الرموز، أنظمة الزمن
+
+  - id: skill-scenario-bible
+    name_ar: إنجيل المادة / السيناريو
+    layer: material
+    path: skills/skill-scenario-bible
+    modes: [write, analyze, free]
+    description: الفابيولا، الخط الزمني، حقائق العالم
+
+  - id: skill-plot-architecture
+    name_ar: معمار الحبكة
+    layer: plot
+    path: skills/skill-plot-architecture
+    modes: [write, analyze, critique, free]
+    description: البنية، نقاط التحوّل، السؤال الدرامي
+
+  - id: skill-character-patterns
+    name_ar: أنماط الشخصيات
+    layer: character
+    path: skills/skill-character-patterns
+    modes: [write, analyze, critique, free]
+    description: بطاقات، تناقضات، أصوات، أدوار
+
+  - id: skill-character-arcs
+    name_ar: أقواس الشخصيات
+    layer: character
+    path: skills/skill-character-arcs
+    modes: [write, analyze, critique, free]
+    description: التطور عبر قرارات تحت ضغط
+
+  - id: skill-relationship-web
+    name_ar: شبكة العلاقات
+    layer: character
+    path: skills/skill-relationship-web
+    modes: [write, analyze, critique, free]
+    description: تداخل الذوات وتغيّر القوى
+
+  - id: skill-environment-interaction
+    name_ar: التفاعل مع البيئة
+    layer: world
+    path: skills/skill-environment-interaction
+    modes: [write, analyze, critique, free]
+    description: المكان كفاعل يضغط على الخيارات
+
+  - id: skill-scene-engine
+    name_ar: محرّك المشهد
+    layer: scene
+    path: skills/skill-scene-engine
+    modes: [write, free]
+    description: هدف، عائق، تحوّل، سبتيكست
+
+  - id: skill-subtext-irony
+    name_ar: الرسائل المبطنة والمفارقة
+    layer: meaning
+    path: skills/skill-subtext-irony
+    modes: [write, analyze, critique, free]
+    description: باطن الحوار، ثيم-سؤال، سخرية درامية
+
+  - id: skill-voice-narration
+    name_ar: الصوت والسرد
+    layer: discourse
+    path: skills/skill-voice-narration
+    modes: [write, analyze, critique, free]
+    description: راوٍ، تبئير، أسلوب غير مباشر حر
+
+  - id: skill-poetics-semiotics
+    name_ar: الشعرية والسيميائيات
+    layer: meaning
+    path: skills/skill-poetics-semiotics
+    modes: [write, analyze, critique, free]
+    description: موتيفات، إيقاع، تغريب، حقول دلالية
+
+  - id: skill-dialogue
+    name_ar: الحوار الدرامي
+    layer: scene
+    path: skills/skill-dialogue
+    modes: [write, analyze, critique, free]
+    description: الحوار كفعل لا كمعلومات
+
+  - id: skill-revision-critique
+    name_ar: المراجعة والنقد الطبقي
+    layer: critique
+    path: skills/skill-revision-critique
+    modes: [critique, analyze, write, free]
+    description: نقد وفق معايير الجودة الطبقية
+
+  - id: skill-analyze-novel
+    name_ar: تحليل رواية
+    layer: analysis
+    path: skills/skill-analyze-novel
+    modes: [analyze]
+    description: تفكيك رواية موجودة عبر الطبقات
+
+  - id: skill-interview-author
+    name_ar: مقابلة الكاتب
+    layer: intake
+    path: skills/skill-interview-author
+    modes: [interview, write]
+    description: طرح أسئلة لفهم تصوّر الرواية كاملًا
+
+  - id: lens-arabic-heritage
+    name_ar: عدسة التراث العربي
+    layer: lens
+    path: skills/lens-arabic-heritage
+    modes: [write, analyze, critique, free]
+    description: ليالي، مقامات، مدينة، تاريخ، سلطة الحكي
+
+  - id: lens-russian-polyphonic
+    name_ar: عدسة التعدد الروسي
+    layer: lens
+    path: skills/lens-russian-polyphonic
+    modes: [write, analyze, critique, free]
+    description: تعدد أصوات، حوارية، تغريب
+
+  - id: lens-anglophone-craft
+    name_ar: عدسة الحرفة الأنجلوسكسونية
+    layer: lens
+    path: skills/lens-anglophone-craft
+    modes: [write, analyze, critique, free]
+    description: Forster / Wood / McKee / Booth
+
+  - id: lens-classical-poetics
+    name_ar: عدسة الشعرية الكلاسيكية
+    layer: lens
+    path: skills/lens-classical-poetics
+    modes: [write, analyze, critique, free]
+    description: أرسطو، هوراس، الخطابة
+
+# خطط افتراضية للعقل المُدير حسب الوضع
+pipelines:
+  interview:
+    - skill-interview-author
+    - novel-craft-core
+  write_bootstrap:
+    - skill-interview-author
+    - skill-worldbuilding
+    - skill-scenario-bible
+    - skill-character-patterns
+    - skill-plot-architecture
+    - skill-relationship-web
+    - skill-environment-interaction
+  write_draft_loop:
+    - skill-scene-engine
+    - skill-dialogue
+    - skill-subtext-irony
+    - skill-voice-narration
+    - skill-character-arcs
+  write_polish:
+    - skill-poetics-semiotics
+    - skill-revision-critique
+  analyze:
+    - skill-analyze-novel
+    - skill-plot-architecture
+    - skill-character-patterns
+    - skill-voice-narration
+    - skill-subtext-irony
+    - skill-poetics-semiotics
+    - skill-environment-interaction
+    - skill-revision-critique
+  critique:
+    - skill-revision-critique
+    - skill-plot-architecture
+    - skill-character-arcs
+    - skill-subtext-irony
+    - skill-voice-narration
+    - skill-poetics-semiotics

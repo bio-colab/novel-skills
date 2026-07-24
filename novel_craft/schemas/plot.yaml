@@ -1,0 +1,21 @@
+schema_version: "0.1"
+type: plot
+required:
+  - dramatic_question
+  - structure
+fields:
+  dramatic_question: string
+  theme_question: string
+  structure: string  # three-act | five-act | hero-journey | polyphonic | frame-tale | custom
+  inciting_incident: string
+  turning_points:
+    - name: string
+      description: string
+      value_at_stake: string
+  midpoint: string
+  climax: string
+  resolution_effect: string
+  threads:
+    - id: string
+      summary: string
+  notes: string

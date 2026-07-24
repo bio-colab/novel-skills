@@ -1,0 +1,27 @@
+# بطاقة شخصية معيارية — Novel Craft v0.1
+schema_version: "0.1"
+type: character
+required:
+  - id
+  - name
+  - role_in_plot
+  - surface_want
+  - deep_need
+fields:
+  id: string
+  name: string
+  role_in_plot: # protagonist | antagonist | catalyst | foil | witness | ensemble
+  surface_want: string
+  deep_need: string
+  ghost_wound: string
+  core_fear: string
+  core_value: string
+  contradiction: string
+  voice_traits: string
+  arc: # change | fall | flat-impact | revelation | tragic-stasis
+  relationship_edges:
+    - target: string
+      type: string  # love|power|debt|rivalry|secret|kin|mentor
+      current_tension: integer  # 0-10
+  environment_bond: string
+  notes: string

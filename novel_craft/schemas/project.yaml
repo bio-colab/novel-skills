@@ -1,0 +1,28 @@
+schema_version: "0.1"
+type: project
+required:
+  - id
+  - title
+  - mode
+fields:
+  id: string
+  title: string
+  created_at: string
+  updated_at: string
+  mode: string  # write | analyze | critique | free
+  language: string  # ar | en | bilingual
+  genre_hints: list
+  tradition_lenses: list  # arabic | russian | anglophone | classical
+  logline: string
+  status: string  # interview | planning | drafting | revising | analyzing | done
+  paths:
+    root: string
+    characters: string
+    plot: string
+    scenes: string
+    world: string
+    drafts: string
+    analysis: string
+    journal: string
+  active_skills: list
+  last_orchestrator_plan: string
